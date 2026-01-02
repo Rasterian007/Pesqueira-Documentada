@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Histórico – Pesqueira</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <!-- Cursor Personalizado -->
+    <div id="cursor"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- Navegação -->
+    <nav>
+        <div class="logo"><img src="img/LogoOficial.png" alt="Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">Pesqueira Histórica</div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="hover-trigger">Início</a></li>
+            <li><a href="historia.html" class="hover-trigger">História</a></li>
+            <li><a href="linhadotempo.html" class="hover-trigger">Linha do Tempo</a></li>
+            <li><a href="cultura.html" class="hover-trigger">Cultura</a></li>
+            <li><a href="galeria.html" class="hover-trigger">Galeria</a></li>
+            <li><a href="mapa.html" class="hover-trigger">Mapa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção: Mapa -->
+    <section class="content-section alt-bg" style="min-height: 100vh; padding-top: 120px;">
+        <div class="container">
+            <h2 class="section-title fade-in">Mapa de Pesqueira</h2>
+            <p class="fade-in" style="text-align: center; margin-bottom: 40px;">Explore os pontos históricos, igrejas centenárias e locais de cultura.</p>
+            
+            <div class="moldura-foto fade-in">
+                <div id="map"></div>
+            </div>
+            
+            <div class="fade-in" style="text-align: center;">
+                <a href="https://www.openstreetmap.org/#map=14/-8.3583/-36.6964" target="_blank" class="btn-osm hover-trigger">Explorar no OpenStreetMap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Pesqueira Histórica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="cursor.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([-8.3583, -36.6964], 14);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var pontos = [
+            { nome: "Catedral de Santa Águeda", lat: -8.3583, lng: -36.6964, desc: "Igreja centenária e coração da diocese." },
+            { nome: "Castelo de Pesqueira", lat: -8.3630, lng: -36.6900, desc: "Arquitetura icônica e ponto turístico." },
+            { nome: "Antiga Fábrica Peixe", lat: -8.3600, lng: -36.6950, desc: "Patrimônio histórico da era industrial." },
+            { nome: "Cruzeiro (Monte da Graça)", lat: -8.3500, lng: -36.7000, desc: "Mirante com vista panorâmica da cidade." },
+            { nome: "Santuário de Cimbres", lat: -8.3300, lng: -36.8300, desc: "Local sagrado das aparições na Serra do Ororubá." },
+            { nome: "Igreja N. Sra. das Montanhas", lat: -8.3320, lng: -36.8320, desc: "Matriz histórica na antiga Vila de Cimbres." }
+        ];
+
+        pontos.forEach(function(ponto) {
+            L.marker([ponto.lat, ponto.lng]).addTo(map)
+                .bindPopup("<b>" + ponto.nome + "</b><br>" + ponto.desc);
+        });
+    </script>
+</body>
+</html>

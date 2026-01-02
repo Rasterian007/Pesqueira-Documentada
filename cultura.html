@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura – Pesqueira</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Personalizado -->
+    <div id="cursor"></div>
+
+    <!-- Efeito de Granulação (Noise) -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navegação -->
+    <nav>
+        <div class="logo"><img src="img/LogoOficial.png" alt="Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">Pesqueira Histórica</div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="hover-trigger">Início</a></li>
+            <li><a href="historia.html" class="hover-trigger">História</a></li>
+            <li><a href="linhadotempo.html" class="hover-trigger">Linha do Tempo</a></li>
+            <li><a href="cultura.html" class="hover-trigger">Cultura</a></li>
+            <li><a href="galeria.html" class="hover-trigger">Galeria</a></li>
+            <li><a href="mapa.html" class="hover-trigger">Mapa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção: Cultura -->
+    <section id="cultura" class="content-section alt-bg" style="min-height: 80vh;">
+        <div class="container">
+            <h2 class="section-title fade-in">Cultura Viva</h2>
+            <div class="culture-grid">
+                <div class="culture-card fade-in hover-trigger" onclick="window.location.href='caiporas.html'" style="cursor: pointer;">
+                    <h3>Os Caiporas</h3>
+                    <p>A tradição única e misteriosa que colore o carnaval pesqueirense com suas máscaras gigantes e trajes de estopa.</p>
+                </div>
+                <div class="culture-card fade-in hover-trigger" onclick="window.location.href='renda.html'" style="cursor: pointer;">
+                    <h3>Renda Renascença</h3>
+                    <p>Mãos habilidosas que tecem fios em obras de arte, uma herança passada de geração em geração.</p>
+                </div>
+                <div class="culture-card fade-in hover-trigger" onclick="window.location.href='santaagueda.html'" style="cursor: pointer;">
+                    <h3>Festa de Santa Águeda</h3>
+                    <p>A devoção que sobe o monte, unindo fé e a vista panorâmica da cidade.</p>
+                </div>
+                <div class="culture-card fade-in hover-trigger" onclick="window.location.href='icones.html'" style="cursor: pointer;">
+                    <h3>Ícones da Cidade</h3>
+                    <p>A história de Paulo Diniz, Cambinda Velha e as personalidades que marcaram a música e a cultura pesqueirense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Pesqueira Histórica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="cursor.js"></script>
+</body>
+</html>

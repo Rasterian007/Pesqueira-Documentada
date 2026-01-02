@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha do Tempo – Pesqueira</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Personalizado -->
+    <div id="cursor"></div>
+
+    <!-- Efeito de Granulação (Noise) -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navegação -->
+    <nav>
+        <div class="logo"><img src="img/LogoOficial.png" alt="Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">Pesqueira Histórica</div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="hover-trigger">Início</a></li>
+            <li><a href="historia.html" class="hover-trigger">História</a></li>
+            <li><a href="linhadotempo.html" class="hover-trigger">Linha do Tempo</a></li>
+            <li><a href="cultura.html" class="hover-trigger">Cultura</a></li>
+            <li><a href="galeria.html" class="hover-trigger">Galeria</a></li>
+            <li><a href="mapa.html" class="hover-trigger">Mapa</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção: Linha do Tempo -->
+    <section id="linhadotempo" class="content-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Cronologia Histórica</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1671 - Primeiros Registros</h3>
+                    <p>Início da ocupação da região do Sertão e Agreste, com a fundação do aldeamento de Cimbres pelos padres Oratorianos junto aos índios Xukuru.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1800 - A Fazenda</h3>
+                    <p>Manoel José de Siqueira funda a Fazenda Poço Pesqueiro, ponto estratégico de parada para viajantes, dando origem ao núcleo urbano atual.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1880 - Emancipação</h3>
+                    <p>A vila é elevada à categoria de cidade com o nome de Pesqueira, separando-se administrativamente de Cimbres.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1900 - Era Industrial</h3>
+                    <p>O apogeu da indústria de doces e conservas, com a fundação da Fábrica Peixe, projetando a cidade internacionalmente.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Dias Atuais</h3>
+                    <p>Pesqueira se consolida como polo cultural, religioso e turístico, preservando a Renda Renascença e as tradições indígenas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Pesqueira Histórica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="cursor.js"></script>
+</body>
+</html>
